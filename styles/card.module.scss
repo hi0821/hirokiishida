@@ -1,0 +1,31 @@
+/********** card **********/
+@use "./mixin";
+
+.card {
+  width: calc((100% - 32px) / 3);
+  @include mixin.mq(sp) {
+    width: calc((100% - 16px) / 2);
+  }
+  &_image {
+    width: 100%;
+    margin-bottom: 8px;
+    & > img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &_category {
+    display: inline-block;
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+    padding: 2px 4px;
+    background: #000;
+  }
+  &_title {
+    font-size: 1.8rem;
+    @include mixin.mq(sp) {
+      font-size: 1.6rem;
+    }
+  }
+}

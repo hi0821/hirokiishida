@@ -1,0 +1,75 @@
+/********** navigation **********/
+@use "./mixin";
+
+.navigation {
+  &_list {
+    display: flex;
+    align-items: center;
+    gap: 0 32px;
+    @include mixin.mq(sp) {
+      flex-direction: column;
+      justify-content: center;
+      gap: 16px 0;
+      position: fixed;
+      top: 48px;
+      left: 0;
+      transform: translateX(100vw);
+      width: 100%;
+      height: calc(100vh - 48px);
+      background: #fff;
+      border: 3px solid #000;
+      opacity: 0;
+      transition: transform 0.3s;
+    }
+  }
+  &_button {
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 16px;
+    margin: auto;
+    width: 48px;
+    height: 12px;
+    cursor: pointer;
+    @include mixin.mq(sp) {
+      display: block;
+    }
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 100%;
+      height: 3px;
+      background: #000;
+      transition: transform 0.3s;
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+  }
+}
+.on {
+  .navigation {
+    &_list {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    &_button {
+      &::before {
+        bottom: 0;
+        transform: rotate(24deg);
+      }
+      &::after {
+        top: 0;
+        transform: rotate(-24deg);
+      }
+    }
+  }
+}

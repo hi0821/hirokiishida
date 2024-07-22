@@ -1,0 +1,24 @@
+/********** header **********/
+@use "./mixin";
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 3px solid #000;
+  z-index: 99;
+  &_inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1064px;
+    height: 48px;
+    margin: 0 auto;
+    padding: 0 32px;
+    @include mixin.mq(sp) {
+      padding: 0 16px;
+    }
+  }
+}
