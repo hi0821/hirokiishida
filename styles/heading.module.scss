@@ -1,0 +1,10 @@
+/********** heading **********/
+@use "./mixin";
+
+.heading {
+  font-size: 4.8rem;
+  margin-bottom: 16px;
+  @include mixin.mq(sp) {
+    font-size: 3.2rem;
+  }
+}

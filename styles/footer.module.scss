@@ -1,0 +1,17 @@
+/********** footer **********/
+
+.footer {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background: #fff;
+  border: 3px solid #000;
+  &_inner {
+    max-width: 1064px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+  &_copy {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+}

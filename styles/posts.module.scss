@@ -1,0 +1,42 @@
+/********** posts **********/
+@use "./mixin";
+
+.post {
+  &_heading {
+    font-size: 4.8rem;
+    margin-bottom: 8px;
+    @include mixin.mq(sp) {
+      font-size: 3.2rem;
+    }
+  }
+  &_category {
+    display: inline-block;
+    color: #fff;
+    font-size: 1.2rem;
+    margin-right: 8px;
+    padding: 2px 4px;
+    background: #000;
+  }
+  &_date {
+    font-size: 1.4rem;
+    @include mixin.mq(sp) {
+      font-size: 1.2rem;
+    }
+  }
+  &_block {
+    margin-top: 32px;
+    @include mixin.mq(sp) {
+      margin-top: 16px;
+    }
+  }
+  h2 {
+    font-size: 3.2rem;
+    margin: 16px 0;
+    @include mixin.mq(sp) {
+      font-size: 2.4rem;
+    }
+  }
+  p {
+    margin: 16px 0;
+  }
+}

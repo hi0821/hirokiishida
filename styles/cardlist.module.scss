@@ -1,0 +1,11 @@
+/********** cardlist **********/
+@use "./mixin";
+
+.cardlist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 16px;
+  @include mixin.mq(sp) {
+    gap: 16px 8px;
+  }
+}

@@ -1,0 +1,37 @@
+/********** musthead **********/
+@use "./mixin";
+
+.musthead {
+  display: flex;
+  align-items: center;
+  width: 500px;
+  height: 500px;
+  margin:  0 auto;
+  padding: 48px;
+  border: 3px solid #000;
+  @include mixin.mq(sp) {
+    width: 240px;
+    height: 240px;
+    padding: 32px;
+  }
+  &_flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px 16px;
+    @include mixin.mq(sp) {
+      gap: 32px 16px;
+    }
+  }
+  &_letter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc((100% - 80px) / 6);
+    font-size: 4.8rem;
+    font-weight: bold;
+    text-align: center;
+    @include mixin.mq(sp) {
+      font-size: 2rem;
+    }
+  }
+}
