@@ -1,3 +1,5 @@
+import nextConfig from "../../next.config.mjs";
+const BASE_PATH = nextConfig.basePath || "";
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
@@ -35,7 +37,7 @@ export default async function Works() {
             <Card
               key={post.slug}
               link={`/works/${post.slug}`}
-              src={post.frontmatter.thumbnail}
+              src={`${BASE_PATH}/${post.frontmatter.thumbnail}`}
               width={1000}
               height={400}
               alt={post.frontmatter.title}
