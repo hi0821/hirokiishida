@@ -1,3 +1,5 @@
+import nextConfig from "../next.config.mjs";
+const BASE_PATH = nextConfig.basePath || "";
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
@@ -37,10 +39,11 @@ export default async function Posts() {
       <Section>
         <Heading text="ABOUT" />
         <p className={styles.text}>
-          東京でフロントエンド、マークアップエンジニアをしています。<br />
-          1989年秋田県生まれ<br />
-          自動車ガラスのサービス業(エンジニア)、バイクメディアサイトの広告営業をへてWEB業界へ転職。<br />
-          タスクランナー、ワードプレスを使用したWEBサイト制作と某新聞メディアのLP制作、運用を主に行なっています。
+          テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
+          </br>
+          テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
+          </br>
+          テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
         </p>
         <div className={`${styles.flex} ${styles.flex_end} ${styles.button_next}`}>
           <Link href="/about/">READ MORE</Link>
@@ -54,7 +57,7 @@ export default async function Posts() {
             <Card
               key={post.slug}
               link={`/works/${post.slug}`}
-              src={post.frontmatter.thumbnail}
+              src={`${BASE_PATH}/${post.frontmatter.thumbnail}`}
               width={1000}
               height={400}
               alt={post.frontmatter.title}
