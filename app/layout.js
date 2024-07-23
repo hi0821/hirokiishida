@@ -13,6 +13,9 @@ const ubuntu = Ubuntu({
 export const metadata = {
   title: 'HIROKI ISHIDA PORTFOLIO',
   description: '',
+  robots: {
+    index: false,
+  },
 }
 
 export default function RootLayout({ children }) {

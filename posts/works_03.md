@@ -6,7 +6,7 @@ description: "Works03のディスクリプションテキストです。"
 thumbnail: "/posts/works03/thumbnail.jpg"
 ---
 
-![works03.jpg](/posts/works03/thumbnail.jpg)
+![works03.jpg](/hirokiishida/posts/works03/thumbnail.jpg)
 
 ## 見出し
 
