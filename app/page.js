@@ -39,11 +39,8 @@ export default async function Posts() {
       <Section>
         <Heading text="ABOUT" />
         <p className={styles.text}>
-          テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
-          </br>
-          テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
-          </br>
-          テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+          Hiroki Ishida / 石田 寛基<br />
+          I'm a Web engineer based in Tokyo.
         </p>
         <div className={`${styles.flex} ${styles.flex_end} ${styles.button_next}`}>
           <Link href="/about/">READ MORE</Link>
