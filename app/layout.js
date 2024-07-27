@@ -1,3 +1,4 @@
+import Favicon from '/public/img/favicon.ico';
 import { Ubuntu } from "next/font/google";
 import "@/styles/reset.scss"
 import "@/styles/base.scss"
@@ -13,6 +14,7 @@ const ubuntu = Ubuntu({
 export const metadata = {
   title: 'HIROKI ISHIDA PORTFOLIO',
   description: '',
+  icons: [{ rel: 'icon', url: Favicon.src }],
   robots: {
     index: false,
   },
